@@ -134,7 +134,7 @@ form {
 
 .input-container div {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: flex-start;
     margin-top: 5px;
 }
@@ -220,6 +220,6 @@ form button {
         font-size: 12px;
         position: absolute;
         left: 5px;
-        bottom: 30px;
+        bottom: 1px;
     }
 }
