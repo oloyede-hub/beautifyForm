@@ -1,5 +1,225 @@
+/* #596D48. create account btn */
+/* #E5E7EB input border color */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,100&family=Rubik:wght@300;400;500;700&display=swap');
+
+@font-face {
+    font-family: Norse-Bold;
+    src: url(./assets/fonts/Norse-Bold.otf);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    background-color: black;
+}
+
+.container {
+    width: max(400px, 80%);
+    min-width: 300px;
+    height: 100%;
+    margin: 0 auto;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+}
+
+.content-wrapper,.image-left {
+    height: 100%;
+}
+.image-left {
+    width: 40%;
+    background: url('./assets/image/background-image.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-left div {
+    text-transform: uppercase;
+    font-family: Norse-Bold;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    opacity: .4;
+}
+
+.image-left div>p {
+    color: rgb(255, 255, 255);
+    font-size: 60px;
+    padding-left: 5px;
+    letter-spacing: 5px;
+    font-weight: bolder;
+}
+.content-wrapper {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(245, 245, 245);
+}
+
+.content-container {
+    width: 100%;
+    margin-top: 40px ;
+    height: 100%;
+}
+
+
+
+.content-container .p-1 {
+    /* width: max(300px, 100%); */
+    font-size: 14px;
+    width: min(500px, 100%);
+    font-weight: 700;
+    margin-top: 20px;
+    line-height: 1.2rem;
+    padding-left: 20px
+
+}
+
+.content-container >p {
+    margin-top: 20px;
+    line-height: 1rem;
+    font-weight: 700;
+    padding-left: 20px;
+    font-size: 14px;
+
+
+}
+
+
+.login {
+    font-size: 14px;
+    margin-top: 0;
+    margin-left: 20px;
+}
+.login a {
+    color:  rgb(104, 104, 163);
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+
+
+form {
+    height: 300px;
+}
+
+
+.input-container {
+    margin-top: 30px;
+    height: 220px;
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+
+.input-container div {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 5px;
+}
+
+.input-container h2 {
+    font-size: 14px;
+}
+.input-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+label {
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-bottom: 2px;
+}
+
+.input-element {
+    padding: 3px 10px;
+    outline: none;
+    font-size: 12px;
+}
+
+
+.input-element:focus {
+    font-weight: lighter;
+    border: 1px solid blue;
+}
+.input-element::placeholder {
+    color: rgb(204, 204, 206);
+    font-size: 12px;
+    font-style: italic;
+    opacity: .7;
+}
+
+
+
+.input-element:valid {
+    border: 1px solid blue;
+}
+.input-element:invalid:focus{
+    border: 1px solid red;
+}
+
+form button {
+    margin-left: 20px;
+}
+
+
+.btn {
+    padding: 10px 20px;
+    background-color: rgb(104, 104, 163);
+    font-size: 10px;
+    font-weight: bold;
+    border: 1px solid #E5E7EB;
+    outline: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    color: white;
+}
+
+@media (max-width: 700px) {
+
+    .content-container {
+    margin-top: 0px ;
+    position: relative;
+}
+    .input-container {
+        height: 350px;
+    }
+    .input-container div {
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        margin-top: 30px;
+    }
+
+    .login {
+        font-size: 12px;
+        position: absolute;
+        left: 5px;
+        bottom: 30px;
+    }
 }
